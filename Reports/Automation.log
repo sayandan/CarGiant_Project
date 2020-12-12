@@ -1,0 +1,70 @@
+2020-12-12 02:04:57,057 : INFO : test_004_login : ***********Test_002_FindCar**********
+2020-12-12 02:04:57,058 : INFO : test_004_login : ******* test_004_login    ******
+2020-12-12 02:05:12,482 : INFO : test_004_login : **********logged in***********
+2020-12-12 02:05:25,698 : INFO : test_005_find_car : searching for car Honda Civic
+2020-12-12 02:05:25,699 : INFO : test_005_find_car : ********testing result title header*****
+2020-12-12 02:05:25,962 : INFO : test_005_find_car : ***********verify result header success****
+2020-12-12 02:05:25,962 : INFO : test_005_find_car : ***********getting car details***********
+2020-12-12 02:05:26,348 : INFO : test_005_find_car : *****looking for :['Honda', 'Civic', '4 Dr Hatch, Auto, Petrol, White, 2016 (16), 46,018 miles', 'Not Listed', 'Not Clickable']
+2020-12-12 02:05:26,348 : INFO : test_005_find_car : [['Honda', 'Civic', '4 Dr Hatch, Auto, Petrol, White, 2016 (16), 46,018 miles', 'Not Listed', 'Not Clickable']]
+2020-12-12 02:05:37,541 : INFO : test_005_find_car : searching for car Audi Q2
+2020-12-12 02:05:37,542 : INFO : test_005_find_car : ********testing result title header*****
+2020-12-12 02:05:37,810 : INFO : test_005_find_car : ***********verify result header success****
+2020-12-12 02:05:37,810 : INFO : test_005_find_car : ***********getting car details***********
+2020-12-12 02:05:39,939 : ERROR : test_005_find_car : Audi Audi SUV, Manual, Petrol, White, 2017 (67), 29,744 miles
+2020-12-12 02:05:39,939 : ERROR : test_005_find_car : ************not available to add to the watch list*******
+2020-12-12 02:05:39,939 : INFO : test_005_find_car : [['Honda', 'Civic', '4 Dr Hatch, Auto, Petrol, White, 2016 (16), 46,018 miles', 'Not Listed', 'Not Clickable'], ['Audi', 'Audi', 'SUV, Manual, Petrol, White, 2017 (67), 29,744 miles', 'Listed', 'Not Clickable']]
+2020-12-12 02:05:49,895 : INFO : test_005_find_car : searching for car Ford Focus
+2020-12-12 02:05:49,895 : INFO : test_005_find_car : ********testing result title header*****
+2020-12-12 02:05:50,088 : INFO : test_005_find_car : ***********verify result header success****
+2020-12-12 02:05:50,088 : INFO : test_005_find_car : ***********getting car details***********
+2020-12-12 02:05:52,246 : ERROR : test_005_find_car : Ford Ford 5 Dr Hatch, Manual, Diesel, Blue, 2015 (65), 59,427 miles
+2020-12-12 02:05:52,246 : ERROR : test_005_find_car : ************not available to add to the watch list*******
+2020-12-12 02:05:52,247 : INFO : test_005_find_car : [['Honda', 'Civic', '4 Dr Hatch, Auto, Petrol, White, 2016 (16), 46,018 miles', 'Not Listed', 'Not Clickable'], ['Audi', 'Audi', 'SUV, Manual, Petrol, White, 2017 (67), 29,744 miles', 'Listed', 'Not Clickable'], ['Ford', 'Ford', '5 Dr Hatch, Manual, Diesel, Blue, 2015 (65), 59,427 miles', 'Listed', 'Not Clickable']]
+2020-12-12 02:06:02,067 : INFO : test_005_find_car : searching for car Ford Focus
+2020-12-12 02:06:02,067 : INFO : test_005_find_car : ********testing result title header*****
+2020-12-12 02:06:02,278 : INFO : test_005_find_car : ***********verify result header success****
+2020-12-12 02:06:02,278 : INFO : test_005_find_car : ***********getting car details***********
+2020-12-12 02:06:05,213 : INFO : test_005_find_car : *****looking for :['Ford', 'Focus', 'Estate, Manual, Diesel, Grey, 2016 (16), 62,594 miles', 'Listed', 'Clickable']
+2020-12-12 02:06:05,214 : INFO : test_005_find_car : [['Honda', 'Civic', '4 Dr Hatch, Auto, Petrol, White, 2016 (16), 46,018 miles', 'Not Listed', 'Not Clickable'], ['Audi', 'Audi', 'SUV, Manual, Petrol, White, 2017 (67), 29,744 miles', 'Listed', 'Not Clickable'], ['Ford', 'Ford', '5 Dr Hatch, Manual, Diesel, Blue, 2015 (65), 59,427 miles', 'Listed', 'Not Clickable'], ['Ford', 'Focus', 'Estate, Manual, Diesel, Grey, 2016 (16), 62,594 miles', 'Listed', 'Clickable']]
+2020-12-12 02:06:22,162 : INFO : test_005_find_car : searching for car BMW All 7-series
+2020-12-12 02:06:22,163 : INFO : test_005_find_car : ********testing result title header*****
+2020-12-12 02:06:22,329 : INFO : test_005_find_car : ***********verify result header success****
+2020-12-12 02:06:22,330 : INFO : test_005_find_car : ***********getting car details***********
+2020-12-12 02:06:24,551 : INFO : test_005_find_car : *****looking for :['BMW', 'All 7-series', 'Saloon, Auto, Diesel, Grey, 2016 (66), 20,834 miles', 'Listed', 'Clickable']
+2020-12-12 02:06:24,551 : INFO : test_005_find_car : [['Honda', 'Civic', '4 Dr Hatch, Auto, Petrol, White, 2016 (16), 46,018 miles', 'Not Listed', 'Not Clickable'], ['Audi', 'Audi', 'SUV, Manual, Petrol, White, 2017 (67), 29,744 miles', 'Listed', 'Not Clickable'], ['Ford', 'Ford', '5 Dr Hatch, Manual, Diesel, Blue, 2015 (65), 59,427 miles', 'Listed', 'Not Clickable'], ['Ford', 'Focus', 'Estate, Manual, Diesel, Grey, 2016 (16), 62,594 miles', 'Listed', 'Clickable'], ['BMW', 'All 7-series', 'Saloon, Auto, Diesel, Grey, 2016 (66), 20,834 miles', 'Listed', 'Clickable']]
+2020-12-12 02:09:54,640 : INFO : test_004_login : ***********Test_002_FindCar**********
+2020-12-12 02:09:54,641 : INFO : test_004_login : ******* test_004_login    ******
+2020-12-12 02:10:01,166 : INFO : test_004_login : **********logged in***********
+2020-12-12 02:10:10,890 : INFO : test_005_find_car : searching for car Honda Civic
+2020-12-12 02:10:10,891 : INFO : test_005_find_car : ********testing result title header*****
+2020-12-12 02:10:11,257 : INFO : test_005_find_car : ***********verify result header success****
+2020-12-12 02:10:11,258 : INFO : test_005_find_car : ***********getting car details***********
+2020-12-12 02:10:11,614 : INFO : test_005_find_car : *****looking for :['Honda', 'Civic', '4 Dr Hatch, Auto, Petrol, White, 2016 (16), 46,018 miles', 'Not Listed', 'Not Clickable']
+2020-12-12 02:10:11,614 : INFO : test_005_find_car : [['Honda', 'Civic', '4 Dr Hatch, Auto, Petrol, White, 2016 (16), 46,018 miles', 'Not Listed', 'Not Clickable']]
+2020-12-12 02:10:20,883 : INFO : test_005_find_car : searching for car Audi Q2
+2020-12-12 02:10:20,883 : INFO : test_005_find_car : ********testing result title header*****
+2020-12-12 02:10:21,016 : INFO : test_005_find_car : ***********verify result header success****
+2020-12-12 02:10:21,016 : INFO : test_005_find_car : ***********getting car details***********
+2020-12-12 02:10:23,139 : ERROR : test_005_find_car : Audi Audi SUV, Manual, Petrol, White, 2017 (67), 29,744 miles
+2020-12-12 02:10:23,139 : ERROR : test_005_find_car : ************not available to add to the watch list*******
+2020-12-12 02:10:23,140 : INFO : test_005_find_car : [['Honda', 'Civic', '4 Dr Hatch, Auto, Petrol, White, 2016 (16), 46,018 miles', 'Not Listed', 'Not Clickable'], ['Audi', 'Audi', 'SUV, Manual, Petrol, White, 2017 (67), 29,744 miles', 'Listed', 'Not Clickable']]
+2020-12-12 02:10:33,986 : INFO : test_005_find_car : searching for car Ford Focus
+2020-12-12 02:10:33,986 : INFO : test_005_find_car : ********testing result title header*****
+2020-12-12 02:10:34,217 : INFO : test_005_find_car : ***********verify result header success****
+2020-12-12 02:10:34,217 : INFO : test_005_find_car : ***********getting car details***********
+2020-12-12 02:10:36,334 : ERROR : test_005_find_car : Ford Ford 5 Dr Hatch, Manual, Diesel, Blue, 2015 (65), 59,427 miles
+2020-12-12 02:10:36,335 : ERROR : test_005_find_car : ************not available to add to the watch list*******
+2020-12-12 02:10:36,335 : INFO : test_005_find_car : [['Honda', 'Civic', '4 Dr Hatch, Auto, Petrol, White, 2016 (16), 46,018 miles', 'Not Listed', 'Not Clickable'], ['Audi', 'Audi', 'SUV, Manual, Petrol, White, 2017 (67), 29,744 miles', 'Listed', 'Not Clickable'], ['Ford', 'Ford', '5 Dr Hatch, Manual, Diesel, Blue, 2015 (65), 59,427 miles', 'Listed', 'Not Clickable']]
+2020-12-12 02:10:46,289 : INFO : test_005_find_car : searching for car Ford Focus
+2020-12-12 02:10:46,290 : INFO : test_005_find_car : ********testing result title header*****
+2020-12-12 02:10:46,348 : INFO : test_005_find_car : ***********verify result header success****
+2020-12-12 02:10:46,348 : INFO : test_005_find_car : ***********getting car details***********
+2020-12-12 02:10:49,256 : INFO : test_005_find_car : *****looking for :['Ford', 'Focus', 'Estate, Manual, Diesel, Grey, 2016 (16), 62,594 miles', 'Listed', 'Clickable']
+2020-12-12 02:10:49,257 : INFO : test_005_find_car : [['Honda', 'Civic', '4 Dr Hatch, Auto, Petrol, White, 2016 (16), 46,018 miles', 'Not Listed', 'Not Clickable'], ['Audi', 'Audi', 'SUV, Manual, Petrol, White, 2017 (67), 29,744 miles', 'Listed', 'Not Clickable'], ['Ford', 'Ford', '5 Dr Hatch, Manual, Diesel, Blue, 2015 (65), 59,427 miles', 'Listed', 'Not Clickable'], ['Ford', 'Focus', 'Estate, Manual, Diesel, Grey, 2016 (16), 62,594 miles', 'Listed', 'Clickable']]
+2020-12-12 02:10:59,060 : INFO : test_005_find_car : searching for car BMW All 7-series
+2020-12-12 02:10:59,061 : INFO : test_005_find_car : ********testing result title header*****
+2020-12-12 02:10:59,106 : INFO : test_005_find_car : ***********verify result header success****
+2020-12-12 02:10:59,106 : INFO : test_005_find_car : ***********getting car details***********
+2020-12-12 02:11:01,332 : INFO : test_005_find_car : *****looking for :['BMW', 'All 7-series', 'Saloon, Auto, Diesel, Grey, 2016 (66), 20,834 miles', 'Listed', 'Clickable']
+2020-12-12 02:11:01,332 : INFO : test_005_find_car : [['Honda', 'Civic', '4 Dr Hatch, Auto, Petrol, White, 2016 (16), 46,018 miles', 'Not Listed', 'Not Clickable'], ['Audi', 'Audi', 'SUV, Manual, Petrol, White, 2017 (67), 29,744 miles', 'Listed', 'Not Clickable'], ['Ford', 'Ford', '5 Dr Hatch, Manual, Diesel, Blue, 2015 (65), 59,427 miles', 'Listed', 'Not Clickable'], ['Ford', 'Focus', 'Estate, Manual, Diesel, Grey, 2016 (16), 62,594 miles', 'Listed', 'Clickable'], ['BMW', 'All 7-series', 'Saloon, Auto, Diesel, Grey, 2016 (66), 20,834 miles', 'Listed', 'Clickable']]
