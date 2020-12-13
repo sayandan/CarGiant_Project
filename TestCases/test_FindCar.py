@@ -42,11 +42,10 @@ class TestFindCar(BaseTest):
             self.car_flag = self.find_car.add_to_watchlist(get_data["Detail"])
             self.car_flag.insert(0, get_data["Make"])
             self.car_flag.insert(1, get_data["Model"])
-            self.logger.info("*****looking for :" + str(self.car_flag))
         except NoSuchElementException:
             self.logger.error(get_data["Make"] + ' ' + get_data["Make"] + ' ' + get_data["Detail"])
             self.logger.error("************not available to add to the watch list*******")
-            self.car_flag = [get_data["Make"], get_data["Make"], get_data["Detail"], 'Listed', 'Not Clickable']
+            self.car_flag = [get_data["Make"], get_data["Make"], get_data["Detail"], 'Listed', 'SOLD TODAY']
 
         self.car_flag_all.append(self.car_flag)
         self.logger.info(str(self.car_flag_all))
@@ -56,11 +55,10 @@ class TestFindCar(BaseTest):
 
     @pytest.fixture(params=(
             {"Make":  "Honda", "Model":  "Civic", "Detail": "4 Dr Hatch, Auto, Petrol, White, 2016 (16), 46,018 miles"},
-            {"Make":  "Audi", "Model":  "Q2", "Detail": "SUV, Manual, Petrol, White, 2017 (67), 29,744 miles"},
-            {"Make": "Ford", "Model": "Focus", "Detail": "5 Dr Hatch, Manual, Diesel, Blue, 2015 (65), 59,427 miles"},
-            {"Make": "Ford", "Model": "Focus", "Detail": "Estate, Manual, Diesel, Grey, 2016 (16), 62,594 miles"},
+            {"Make": "Ford", "Model": "Focus", "Detail": "5 Dr Hatch, Manual, Petrol, Black, 2017 (66), 33,307 miles"},
+            {"Make": "Ford", "Model": "Focus", "Detail": "5 Dr Hatch, Manual, Petrol, Grey, 2016 (66), 34,075 miles"},
+            {"Make":  "Audi", "Model":  "Q2", "Detail": "SUV, Manual, Petrol, White, 2017 (67), 23,240 miles"},
             {"Make":  "BMW", "Model":  "All 7-series", "Detail": "Saloon, Auto, Diesel, Grey, 2016 (66), 20,834 miles"}
     ))
     def get_data(self, request):
         return request.param
-

@@ -1,11 +1,5 @@
 import time
-
-from selenium.common.exceptions import TimeoutException, NoSuchElementException
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions as ec
-from selenium.webdriver.support.wait import WebDriverWait
-
-from PageObjects.LoginPage import LoginPage
 from Utilities.BasePage import BasePage
 
 
@@ -21,8 +15,6 @@ class FindCar(BasePage):
 
     VERIFY_RESULTS = (By.XPATH, "//div[@class='row']/h1")
     CAR_DETAIL_TEXT = (By.XPATH, "//div[@class='vehicle-tile__detail']/p")
-    # //div[ @class ='vehicle-tile__detail'] / p /../../..// a[text()='Add to watchlist']
-    #// div[ @class ='vehicle-tile__detail'] / p / ancestor::article / div / div[ @class ='vehicle-tile__actions'] / a[text()='Add to watchlist']
 
     """constructor"""
     def __init__(self, driver):
@@ -34,17 +26,16 @@ class FindCar(BasePage):
         time.sleep(2)
         make_lists = self.get_elements(self.MAKE_LISTS)
         for make_list in make_lists:
-            print(make_list.text)
             if make in make_list.text:
-                print(make_list.text)
+                print('\n' + make_list.text)
                 make_list.click()
                 break
         self.do_click(self.MODEL_DROPDOWN)
         time.sleep(2)
         model_lists = self.get_elements(self.MODEL_LISTS)
         for model_list in model_lists:
-            print(model_list.text)
             if model in model_list.text:
+                print(model_list.text)
                 model_list.click()
                 break
         self.do_click(self.SEARCH_BUTTON)
@@ -54,27 +45,25 @@ class FindCar(BasePage):
 
     def add_to_watchlist(self, car_detail):
         cars = self.get_elements(self.CAR_DETAIL_TEXT)
-        car_flag = [car_detail, 'Not Listed', 'Not Clickable']
+        car_flag = [car_detail, 'Not Listed', 'SOLD']
         for car in cars:
-            print(car.text)
             if car_detail == car.text:
-                print('car detail captured ' + car.text)
+                print(car.text + ' ' + car.find_element_by_xpath("ancestor::article/div/a").text)
                 time.sleep(2)
-                watch_list = car.find_element_by_xpath("ancestor::article/div/div[@class='vehicle-tile__actions']/a[text()='Add to watchlist']")
-
-                if watch_list.is_displayed():
-                    print('element clickable')
+                if car.find_element_by_xpath("ancestor::article/div/a").text == 'SOLD TODAY':
+                    print('Element not clickable')
                     car_flag[1] = 'Listed'
-                    car_flag[2] = 'Clickable'
+                    car_flag[2] = 'SOLD TODAY'
+                    print(car_flag)
+
+                watch_list = car.find_element_by_xpath("ancestor::article/div/div[@class='vehicle-tile__actions']/a[text()='Add to watchlist']")
+                if watch_list.is_displayed():
+                    print('Element clickable')
+                    car_flag[1] = 'Listed'
+                    car_flag[2] = 'NOT SOLD'
                     print(car_flag)
                     self.driver.execute_script("arguments[0].click();", watch_list)  # Javascript click
-                elif watch_list.is_not_displayed():
-                    print('element not clickable')
-                    car_flag[1] = 'Listed'
-                    print(car_flag)
-
-                print(f"Car {self.CAR_DETAIL_TEXT} is not listed anymore")
-        print(car_flag)
+                break
         return car_flag
 
 
