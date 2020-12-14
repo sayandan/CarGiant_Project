@@ -37,7 +37,7 @@ class TestMyGarage(BaseTest):
         self.logger.info(expected_watch_list)
 
         if actual_watch_list.sort() == expected_watch_list.sort():
-            self.logger.info("*******expected watch list match actual watches list*********")
+            self.logger.info("*******expected watch list matches actual watch list*********")
             assert True
         else:
             self.driver.save_screenshot('../Reports/test_compare_list.png')

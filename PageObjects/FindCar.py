@@ -26,9 +26,10 @@ class FindCar(BasePage):
         self.do_click(self.MAKE_DROPDOWN)
         time.sleep(2)
         make_lists = self.get_elements(self.MAKE_LISTS)
+        print('\n')
         for make_list in make_lists:
             if make in make_list.text:
-                print('\n' + make_list.text)
+                print(make_list.text)
                 make_list.click()
                 break
         self.do_click(self.MODEL_DROPDOWN)

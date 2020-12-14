@@ -70,7 +70,11 @@ class TestFindCar(BaseTest):
             {"Make": "Ford", "Model": "Focus", "Detail": "5 Dr Hatch, Manual, Petrol, Black, 2017 (66), 33,307 miles"},
             {"Make": "Ford", "Model": "Focus", "Detail": "5 Dr Hatch, Manual, Petrol, Grey, 2016 (66), 34,075 miles"},
             {"Make":  "Audi", "Model":  "Q2", "Detail": "SUV, Manual, Petrol, White, 2017 (67), 23,240 miles"},
-            {"Make":  "BMW", "Model":  "All 7-series", "Detail": "Saloon, Auto, Diesel, Grey, 2016 (66), 20,834 miles"}
+            {"Make":  "BMW", "Model":  "All 7-series", "Detail": "Saloon, Auto, Diesel, Grey, 2016 (66), 20,834 miles"},
+            {"Make": "Audi", "Model": "A5", "Detail": "Cabriolet / Convertible, Manual, Diesel, Black, 2016 (16), 24,701 miles"},
+            {"Make": "Audi", "Model": "A5", "Detail": "5 Dr Hatch, Auto, Diesel, Grey, 2016 (66), 45,004 miles"},
+            {"Make": "Audi", "Model": "A5", "Detail": "Coupe, Manual, Petrol, White, 2017 (17), 18,510 miles"},
+            {"Make": "Audi", "Model": "A5", "Detail": "5 Dr Hatch, Auto, Diesel, Red, 2016 (66), 48,656 miles"}
     ))
     def get_data(self, request):
         return request.param
