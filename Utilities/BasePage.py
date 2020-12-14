@@ -14,6 +14,9 @@ class BasePage:
     def do_click(self, by_locator):
         WebDriverWait(self.driver, 10).until(ec.presence_of_element_located(by_locator)).click()
 
+    def js_click(self, by_locator):
+        self.driver.execute_script("arguments[0].click();", self.driver.find_element(*by_locator))
+
     def do_send_keys(self, by_locator, text):
         WebDriverWait(self.driver, 10).until(ec.presence_of_element_located(by_locator)).clear()
         WebDriverWait(self.driver, 10).until(ec.presence_of_element_located(by_locator)).send_keys(text)

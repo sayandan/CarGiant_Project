@@ -23,7 +23,8 @@ class LoginPage(BasePage):
         self.do_click(self.LOGIN_BUTTON)
         self.do_send_keys(self.USERNAME_TEXTBOX, username)
         self.do_send_keys(self.PASSWORD_TEXTBOX, password)
-        self.do_click(self.SIGNIN_BUTTON)
+        # self.do_click(self.SIGNIN_BUTTON)
+        self.js_click(self.SIGNIN_BUTTON)
 
     def page_title(self, title):
         return self.get_title(title)

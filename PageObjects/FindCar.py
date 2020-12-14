@@ -2,6 +2,7 @@ import time
 from selenium.webdriver.common.by import By
 from Utilities.BasePage import BasePage
 
+car_flag = []
 
 class FindCar(BasePage):
 
@@ -45,7 +46,8 @@ class FindCar(BasePage):
 
     def add_to_watchlist(self, car_detail):
         cars = self.get_elements(self.CAR_DETAIL_TEXT)
-        car_flag = [car_detail, 'Not Listed', 'SOLD']
+        global car_flag
+        car_flag = [car_detail, 'Not Listed', 'SOLD TODAY']
         for car in cars:
             if car_detail == car.text:
                 print(car.text + ' ' + car.find_element_by_xpath("ancestor::article/div/a").text)

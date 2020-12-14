@@ -17,6 +17,9 @@ class TestData:
 
     RESULTS_HEADER = 'Your Search Results'
 
+    WATCH_LISTS = []
+    print(WATCH_LISTS)
+
 
 # Open the existing json file for loading into a variable
 class CarsData:

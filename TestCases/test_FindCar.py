@@ -1,8 +1,11 @@
+import json
+
 import pytest
-from selenium.common.exceptions import NoSuchElementException
+from selenium.common.exceptions import NoSuchElementException, TimeoutException
 
 from PageObjects.FindCar import FindCar
 from PageObjects.LoginPage import LoginPage
+from PageObjects.MyGarage import MyGarage
 from Utilities.BaseTest import BaseTest
 from Utilities.TestData import TestData
 
@@ -17,6 +20,13 @@ class TestFindCar(BaseTest):
         self.login_page = LoginPage(self.driver)
         self.login_page.login(TestData.USERNAME, TestData.PASSWORD)
         self.logger.info("**********logged in***********")
+
+        self.my_garage = MyGarage(self.driver)
+        try:
+            self.my_garage.delete_all_watch_list()
+            self.logger.info("******Deleting existing watch lists******")
+        except TimeoutException:
+            self.logger.error(TimeoutException)
 
     def test_005_find_car(self, get_data):
         self.logger = self.get_logger()
@@ -50,8 +60,10 @@ class TestFindCar(BaseTest):
         self.car_flag_all.append(self.car_flag)
         self.logger.info(str(self.car_flag_all))
 
-    def test_006_my_car(self):
-        print(str(self.car_flag_all))
+        print(self.car_flag_all)
+
+        with open('../Utilities/watchlist.txt', 'w') as outfile:
+            json.dump(self.car_flag_all, outfile)
 
     @pytest.fixture(params=(
             {"Make":  "Honda", "Model":  "Civic", "Detail": "4 Dr Hatch, Auto, Petrol, White, 2016 (16), 46,018 miles"},
