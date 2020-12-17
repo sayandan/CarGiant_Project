@@ -40,9 +40,10 @@ class MyGarage(BasePage):
 
     def delete_all_watch_list(self):
         self.do_click(self.MY_GARAGE_LINK)
+        print('\n')
         while self.is_visible(self.REMOVE_ALL_BUTTON):
             self.js_click(self.REMOVE_ALL_BUTTON)
-            print('\n' + 'Deleting watch list....')
+            print('Deleting watch list....')
             time.sleep(2)
 
 

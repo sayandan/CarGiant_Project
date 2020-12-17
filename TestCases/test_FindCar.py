@@ -28,6 +28,11 @@ class TestFindCar(BaseTest):
         except TimeoutException:
             self.logger.error(TimeoutException)
 
+    # Open JSON file which contains test data
+    with open('../Utilities/cars.JSON') as file:
+        car_list = json.load(file)
+
+    @pytest.mark.parametrize('get_data', car_list)
     def test_005_find_car(self, get_data):
         self.logger = self.get_logger()
         self.find_car = FindCar(self.driver)
@@ -62,19 +67,21 @@ class TestFindCar(BaseTest):
 
         print(self.car_flag_all)
 
+        # Save watchlist to a file for comparing
         with open('../Utilities/watchlist.txt', 'w') as outfile:
             json.dump(self.car_flag_all, outfile)
 
-    @pytest.fixture(params=(
-            {"Make":  "Honda", "Model":  "Civic", "Detail": "4 Dr Hatch, Auto, Petrol, White, 2016 (16), 46,018 miles"},
-            {"Make": "Ford", "Model": "Focus", "Detail": "5 Dr Hatch, Manual, Petrol, Black, 2017 (66), 33,307 miles"},
-            {"Make": "Ford", "Model": "Focus", "Detail": "5 Dr Hatch, Manual, Petrol, Grey, 2016 (66), 34,075 miles"},
-            {"Make":  "Audi", "Model":  "Q2", "Detail": "SUV, Manual, Petrol, White, 2017 (67), 23,240 miles"},
-            {"Make":  "BMW", "Model":  "All 7-series", "Detail": "Saloon, Auto, Diesel, Grey, 2016 (66), 20,834 miles"},
-            {"Make": "Audi", "Model": "A5", "Detail": "Cabriolet / Convertible, Manual, Diesel, Black, 2016 (16), 24,701 miles"},
-            {"Make": "Audi", "Model": "A5", "Detail": "5 Dr Hatch, Auto, Diesel, Grey, 2016 (66), 45,004 miles"},
-            {"Make": "Audi", "Model": "A5", "Detail": "Coupe, Manual, Petrol, White, 2017 (17), 18,510 miles"},
-            {"Make": "Audi", "Model": "A5", "Detail": "5 Dr Hatch, Auto, Diesel, Red, 2016 (66), 48,656 miles"}
-    ))
-    def get_data(self, request):
-        return request.param
+    #  read test data from fixture
+    # @pytest.fixture(params=(
+    #         {"Make":  "Honda", "Model":  "Civic", "Detail": "4 Dr Hatch, Auto, Petrol, White, 2016 (16), 46,018 miles"},
+    #         {"Make": "Ford", "Model": "Focus", "Detail": "5 Dr Hatch, Manual, Petrol, Black, 2017 (66), 33,307 miles"},
+    #         {"Make": "Ford", "Model": "Focus", "Detail": "5 Dr Hatch, Manual, Petrol, Grey, 2016 (66), 34,075 miles"},
+    #         {"Make":  "Audi", "Model":  "Q2", "Detail": "SUV, Manual, Petrol, White, 2017 (67), 23,240 miles"},
+    #         {"Make":  "BMW", "Model":  "All 7-series", "Detail": "Saloon, Auto, Diesel, Grey, 2016 (66), 20,834 miles"},
+    #         {"Make": "Audi", "Model": "A5", "Detail": "Cabriolet / Convertible, Manual, Diesel, Black, 2016 (16), 24,701 miles"},
+    #         {"Make": "Audi", "Model": "A5", "Detail": "5 Dr Hatch, Auto, Diesel, Grey, 2016 (66), 45,004 miles"},
+    #         {"Make": "Audi", "Model": "A5", "Detail": "Coupe, Manual, Petrol, White, 2017 (17), 18,510 miles"},
+    #         {"Make": "Audi", "Model": "A5", "Detail": "5 Dr Hatch, Auto, Diesel, Red, 2016 (66), 48,656 miles"}
+    # ))
+    # def get_data(self, request):
+    #     return request.param

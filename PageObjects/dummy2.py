@@ -63,3 +63,5 @@ for i in range(len(list1)):
     list3.append(list(list1[i].split(", ")))
 print(list3)
 
+with open('../Utilities/cars.JSON') as file:
+    data = json.load(file)
