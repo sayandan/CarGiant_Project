@@ -1,6 +1,3 @@
-import json
-
-
 class TestData:
     CarsData = None
     cars = None
@@ -16,16 +13,5 @@ class TestData:
     LOGIN_VERIFY_TEXT = 'Welcome'
 
     RESULTS_HEADER = 'Your Search Results'
-
-    WATCH_LISTS = []
-    print(WATCH_LISTS)
-
-
-# Open the existing json file for loading into a variable
-class CarsData:
-
-    def __init__(self):
-        with open('cars.JSON', 'r') as f:
-            self.cars = json.load(f)
 
 

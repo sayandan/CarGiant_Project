@@ -2,6 +2,7 @@ from selenium import webdriver
 import pytest
 from selenium.webdriver.chrome.options import Options
 from Utilities.TestData import TestData
+
 # fixtures are functions which will run before each test function to which it is applied.
 # it is used to feed some data to tests such as db connections, url etc. to access the fixture function the tests have
 # to mention the fixture name as input parameter
